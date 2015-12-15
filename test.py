@@ -102,3 +102,68 @@ sum = 0
 for x in range(101):
     sum = sum + x
 print sum
+
+sum = 0
+n = 99
+while n > 0:
+    sum = sum + n
+    n = n - 2
+print sum
+
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+print d['Michael']
+
+d['Adam'] = 67
+
+print d['Adam']
+
+print 'Thomas' in d
+
+print d.get('Thomas')
+print d.get('Thomas', -1)
+
+s = set([1, 2, 3])
+print s
+
+s = set([1, 1, 2, 2, 3, 3])
+print s
+
+s.add(4)
+print s
+
+s.remove(4)
+print s
+
+s1 = set([1, 2, 3])
+s2 = set([2, 3, 4])
+print s1 & s2
+print s1 | s2
+
+print help(abs)
+
+def my_abs(x):
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+print my_abs(-100)
+
+def nop():
+    pass
+
+def my_abs(x):
+    if not isinstance(x, (int, float)):
+        raise TypeError('bad operand type')
+    if x >= 0:
+        return x
+    else:
+        return -x
+
+def power(x, n=2):
+    s = 1
+    while n > 0:
+        n = n - 1
+        s = s * x
+    return s
+
